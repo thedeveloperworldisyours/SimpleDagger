@@ -6,4 +6,6 @@ import dagger.Component
 interface CarComponent {
 
     var car:Car
+
+    fun inject(mainActivity: MainActivity)
 }
