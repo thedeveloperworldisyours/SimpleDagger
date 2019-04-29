@@ -1,6 +1,5 @@
 package com.thedeveloperworldisyours.simpledagger
 
-import android.util.Log
 import javax.inject.Inject
 
 class Car() {
@@ -16,6 +15,11 @@ class Car() {
         this.engine = engine
         this.wheels = wheels
 
+    }
+
+    @Inject
+    fun enableRemote(remote: Remote) {
+        remote.setListener(this)
     }
 
     fun drive():String {

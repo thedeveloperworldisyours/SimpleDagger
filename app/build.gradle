@@ -33,7 +33,7 @@ dependencies {
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
 
     def dagger = "2.15"
-    compile "com.google.dagger:dagger-android:$dagger"
+    implementation "com.google.dagger:dagger-android:$dagger"
     kapt "com.google.dagger:dagger-android-processor:$dagger"
     compileOnly "com.google.dagger:dagger:$dagger"
     kapt "com.google.dagger:dagger-compiler:$dagger"
