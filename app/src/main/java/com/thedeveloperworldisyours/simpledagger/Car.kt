@@ -6,6 +6,7 @@ class Car() {
 
     lateinit var engine: Engine
     lateinit var wheels: Wheels
+    var remoteString = ""
 
     @Inject
     constructor(
@@ -19,10 +20,10 @@ class Car() {
 
     @Inject
     fun enableRemote(remote: Remote) {
-        remote.setListener(this)
+        remoteString = remote.setListener(this)
     }
 
-    fun drive():String {
-        return "driving..."
+    fun drive(): String {
+        return "driving...${remoteString}...${wheels.tires.inflate()}"
     }
 }

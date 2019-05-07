@@ -2,10 +2,10 @@ package com.thedeveloperworldisyours.simpledagger
 
 import dagger.Component
 
-@Component
+@Component(modules = [WheelsModule::class])
 interface CarComponent {
 
-    var car:Car
+    val car: Car
 
     fun inject(mainActivity: MainActivity)
 }
