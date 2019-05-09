@@ -1,5 +1,6 @@
-package com.thedeveloperworldisyours.simpledagger
+package com.thedeveloperworldisyours.simpledagger.car
 
+import com.thedeveloperworldisyours.simpledagger.car.Engine
 import javax.inject.Inject
 
 class PetrolEngine @Inject

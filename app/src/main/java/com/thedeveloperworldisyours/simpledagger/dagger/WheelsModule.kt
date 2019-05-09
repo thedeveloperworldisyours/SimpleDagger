@@ -1,5 +1,8 @@
-package com.thedeveloperworldisyours.simpledagger
+package com.thedeveloperworldisyours.simpledagger.dagger
 
+import com.thedeveloperworldisyours.simpledagger.car.Rims
+import com.thedeveloperworldisyours.simpledagger.car.Tires
+import com.thedeveloperworldisyours.simpledagger.car.Wheels
 import dagger.Module
 import dagger.Provides
 
@@ -20,7 +23,7 @@ class WheelsModule {
     }
 
     @Provides
-    fun provideWheels(rims:Rims, tires :Tires): Wheels {
+    fun provideWheels(rims: Rims, tires : Tires): Wheels {
         return Wheels(rims, tires)
     }
 }

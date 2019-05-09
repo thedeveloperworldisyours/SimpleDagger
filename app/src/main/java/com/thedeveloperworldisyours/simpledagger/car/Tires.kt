@@ -1,4 +1,4 @@
-package com.thedeveloperworldisyours.simpledagger
+package com.thedeveloperworldisyours.simpledagger.car
 
 class Tires {
 
