@@ -24,6 +24,7 @@ class Car() {
     }
 
     fun drive(): String {
-        return "driving...${remoteString}...${wheels.tires.inflate()}"
+
+        return "driving...${remoteString}...${wheels.tires.inflate()}...${engine.start()}"
     }
 }
