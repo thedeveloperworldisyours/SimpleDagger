@@ -4,6 +4,7 @@ import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import com.thedeveloperworldisyours.simpledagger.car.Car
 import com.thedeveloperworldisyours.simpledagger.dagger.CarComponent
+import com.thedeveloperworldisyours.simpledagger.dagger.DaggerCarComponent
 import kotlinx.android.synthetic.main.activity_main.*
 import javax.inject.Inject
 
