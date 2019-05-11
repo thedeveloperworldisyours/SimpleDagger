@@ -5,6 +5,7 @@ import android.os.Bundle
 import com.thedeveloperworldisyours.simpledagger.car.Car
 import com.thedeveloperworldisyours.simpledagger.dagger.CarComponent
 import com.thedeveloperworldisyours.simpledagger.dagger.DaggerCarComponent
+import com.thedeveloperworldisyours.simpledagger.dagger.DieselEngineModule
 import kotlinx.android.synthetic.main.activity_main.*
 import javax.inject.Inject
 
@@ -17,7 +18,9 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        val carComponent: CarComponent = DaggerCarComponent.create()
+        val carComponent: CarComponent = DaggerCarComponent.builder()
+            .dieselEngineModule(DieselEngineModule("147"))
+            .build()
 
         carComponent.inject(this)
 
