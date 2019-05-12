@@ -1,11 +1,15 @@
 package com.thedeveloperworldisyours.simpledagger.car
 
-import com.thedeveloperworldisyours.simpledagger.car.Engine
 import javax.inject.Inject
+import javax.inject.Named
 
 class PetrolEngine @Inject
-internal constructor() : Engine {
+internal constructor(@Named("horsePower")var horsePetrol: String,
+                     @Named ("engineCapacity")var engineCapacity: String) : Engine {
+
     override fun start(): String {
-        return "Petrol"
+        return "Petrol..." +
+                "\nhorsePower:$horsePetrol" +
+                "\n engineCapacity:$engineCapacity"
     }
 }
